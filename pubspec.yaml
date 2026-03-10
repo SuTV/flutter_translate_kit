@@ -3,7 +3,7 @@ description: >
   A complete Flutter localization toolkit — zero config, offline-first, 
   on-device ML translation with a built-in CLI that auto-wraps your entire app.
   No API keys. No .arb files. Works out of the box.
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/AKP2499/flutter_translate_kit
 repository: https://github.com/AKP2499/flutter_translate_kit
 issue_tracker: https://github.com/AKP2499/flutter_translate_kit/issues
