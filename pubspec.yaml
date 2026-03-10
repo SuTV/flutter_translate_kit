@@ -1,0 +1,45 @@
+name: flutter_translate_kit
+description: >
+  A complete Flutter localization toolkit — zero config, offline-first, 
+  on-device ML translation with a built-in CLI that auto-wraps your entire app.
+  No API keys. No .arb files. Works out of the box.
+version: 0.0.1
+homepage: https://github.com/yourusername/flutter_translate_kit
+repository: https://github.com/yourusername/flutter_translate_kit
+issue_tracker: https://github.com/yourusername/flutter_translate_kit/issues
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # ML Kit on-device translation (offline, free, 50+ languages)
+  google_mlkit_translation: ^0.13.0
+
+  # Persistent translation cache
+  hive_flutter: ^1.1.0
+  hive: ^2.2.3
+
+  # State management for language switching
+  rxdart: ^0.28.0
+
+  # RTL detection helpers
+  intl: ^0.20.2
+
+  # Path utilities (used by CLI)
+  path: ^1.9.0
+
+flutter:
+  uses-material-design: true
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  build_runner: ^2.4.0
+  hive_generator: ^2.0.0
