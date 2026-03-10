@@ -1,3 +1,7 @@
+## 0.0.4
+
+- Package metadata and changelog updates for Dart pub conventions.
+
 ## 0.0.3
 
 - Fix ML Kit `Translator has been closed` crash by avoiding translator close during language switch and hardening error handling.
