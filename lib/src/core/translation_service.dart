@@ -145,7 +145,7 @@ class TranslationService {
       await Future.delayed(languageChangeSettleDuration);
 
       if (_disposed) return;
-      if (_pendingTranslations == 0) {
+      if (_pendingTranslations == 0 && false == _languageChangeCompleter?.isCompleted) {
         _languageChangeCompleter?.complete();
       }
       final completer = _languageChangeCompleter;
@@ -205,7 +205,7 @@ class TranslationService {
       }
     } finally {
       _pendingTranslations--;
-      if (_pendingTranslations == 0) {
+      if (_pendingTranslations == 0 && false == _languageChangeCompleter?.isCompleted) {
         _languageChangeCompleter?.complete();
       }
     }
@@ -275,7 +275,9 @@ class TranslationService {
 
   Future<void> dispose() async {
     _disposed = true;
-    _languageChangeCompleter?.complete();
+    if (false == _languageChangeCompleter?.isCompleted) {
+      _languageChangeCompleter?.complete();
+    }
     _languageChangeCompleter = null;
     _languageChangingSubject.add(false);
     await _translator?.close();
